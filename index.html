@@ -12,36 +12,38 @@
       box-sizing: border-box;
     }
 
+    /* Light premium background gradient */
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #5a6f8d 0%, #102035 100%);
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
       min-height: 100vh;
     }
 
+    /* Updated glow animations to darkest blue accent */
     @keyframes logoGlow {
       0%, 100% {
-        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+        filter: drop-shadow(0 0 8px rgba(30, 58, 138, 0.3));
       }
       50% {
-        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 40px rgba(100, 180, 255, 0.4));
+        filter: drop-shadow(0 0 20px rgba(30, 58, 138, 0.5)) drop-shadow(0 0 40px rgba(59, 130, 246, 0.3));
       }
     }
 
     @keyframes textGlow {
       0%, 100% {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(100, 180, 255, 0.2);
+        text-shadow: 0 0 10px rgba(30, 58, 138, 0.2), 0 0 20px rgba(59, 130, 246, 0.1);
       }
       50% {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(100, 180, 255, 0.4), 0 0 60px rgba(100, 180, 255, 0.2);
+        text-shadow: 0 0 20px rgba(30, 58, 138, 0.4), 0 0 40px rgba(59, 130, 246, 0.2), 0 0 60px rgba(59, 130, 246, 0.1);
       }
     }
 
     @keyframes borderGlow {
       0%, 100% {
-        box-shadow: 0 0 5px rgba(100, 180, 255, 0.3), inset 0 0 5px rgba(100, 180, 255, 0.1);
+        box-shadow: 0 0 5px rgba(30, 58, 138, 0.2), inset 0 0 5px rgba(30, 58, 138, 0.05);
       }
       50% {
-        box-shadow: 0 0 20px rgba(100, 180, 255, 0.5), inset 0 0 10px rgba(100, 180, 255, 0.2);
+        box-shadow: 0 0 20px rgba(30, 58, 138, 0.3), inset 0 0 10px rgba(30, 58, 138, 0.1);
       }
     }
 
@@ -85,13 +87,15 @@
       }
     }
 
+    /* Light header with soft gray gradient */
     .header {
-      background: linear-gradient(180deg, #102035 0%, #0d1a2d 100%);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border-bottom: 1px solid rgba(203, 213, 225, 0.6);
       position: relative;
       overflow: hidden;
     }
 
+    /* Updated header accents to dark blue */
     .header::before {
       content: '';
       position: absolute;
@@ -99,7 +103,7 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(100, 180, 255, 0.5), transparent);
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.4), transparent);
       animation: shimmer 3s infinite linear;
       background-size: 200% 100%;
     }
@@ -111,7 +115,7 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(100, 180, 255, 0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.2), transparent);
     }
 
     .top-bar {
@@ -119,7 +123,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 20px 60px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(203, 213, 225, 0.4);
       animation: slideIn 0.6s ease-out;
     }
 
@@ -135,16 +139,17 @@
       transform: scale(1.02);
     }
 
+    /* Logo container with dark blue border */
     .logo-image {
       width: 50px;
       height: 50px;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       animation: logoGlow 3s ease-in-out infinite, float 4s ease-in-out infinite;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(30, 58, 138, 0.3);
       position: relative;
       overflow: hidden;
     }
@@ -153,29 +158,32 @@
       content: '';
       position: absolute;
       inset: -2px;
-      background: linear-gradient(45deg, transparent, rgba(100, 180, 255, 0.3), transparent);
+      background: linear-gradient(45deg, transparent, rgba(30, 58, 138, 0.2), transparent);
       border-radius: 12px;
       z-index: -1;
       animation: borderGlow 2s ease-in-out infinite;
     }
 
+    /* Dark icon for light background */
     .logo-image svg {
       width: 30px;
       height: 30px;
-      fill: white;
+      fill: #0f172a;
     }
 
+    /* Dark logo text with dark blue gradient */
     .logo-text {
       font-family: 'Inter', sans-serif;
       font-size: 32px;
       font-weight: 800;
-      color: white;
+      color: #0f172a;
       letter-spacing: 6px;
       animation: textGlow 3s ease-in-out infinite;
-      background: linear-gradient(90deg, #ffffff, #64b4ff, #ffffff);
+      background: linear-gradient(90deg, #0f172a, #1e3a8a, #0f172a);
       background-size: 200% auto;
       -webkit-background-clip: text;
       background-clip: text;
+      -webkit-text-fill-color: transparent;
       transition: all 0.4s ease;
     }
 
@@ -195,11 +203,12 @@
       animation: slideIn 0.6s ease-out 0.1s both;
     }
 
+    /* Light search bar with subtle border */
     .search-bar {
       display: flex;
       align-items: center;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(241, 245, 249, 0.8);
+      border: 1px solid rgba(203, 213, 225, 0.6);
       border-radius: 50px;
       padding: 12px 20px;
       width: 320px;
@@ -208,11 +217,12 @@
       overflow: hidden;
     }
 
+    /* Search bar hover/focus with dark blue */
     .search-bar::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(100, 180, 255, 0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.05), transparent);
       transform: translateX(-100%);
       transition: transform 0.6s ease;
     }
@@ -223,34 +233,37 @@
 
     .search-bar:hover,
     .search-bar:focus-within {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(100, 180, 255, 0.5);
-      box-shadow: 0 0 30px rgba(100, 180, 255, 0.2), 0 0 60px rgba(100, 180, 255, 0.1), inset 0 0 20px rgba(100, 180, 255, 0.05);
+      background: rgba(255, 255, 255, 0.95);
+      border-color: rgba(30, 58, 138, 0.5);
+      box-shadow: 0 0 30px rgba(30, 58, 138, 0.1), 0 0 60px rgba(30, 58, 138, 0.05), inset 0 0 20px rgba(30, 58, 138, 0.02);
       width: 360px;
     }
 
+    /* Dark search icon */
     .search-icon {
       width: 20px;
       height: 20px;
       fill: none;
-      stroke: rgba(255, 255, 255, 0.5);
+      stroke: rgba(100, 116, 139, 0.7);
       stroke-width: 2;
       transition: all 0.3s ease;
       flex-shrink: 0;
     }
 
+    /* Search icon focus to dark blue */
     .search-bar:focus-within .search-icon {
-      stroke: rgba(100, 180, 255, 0.9);
-      filter: drop-shadow(0 0 8px rgba(100, 180, 255, 0.6));
+      stroke: rgba(30, 58, 138, 0.9);
+      filter: drop-shadow(0 0 8px rgba(30, 58, 138, 0.4));
       transform: scale(1.1);
     }
 
+    /* Dark input text */
     .search-input {
       flex: 1;
       background: transparent;
       border: none;
       outline: none;
-      color: white;
+      color: #0f172a;
       font-size: 14px;
       font-weight: 400;
       margin-left: 12px;
@@ -258,23 +271,24 @@
     }
 
     .search-input::placeholder {
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(100, 116, 139, 0.6);
       transition: all 0.3s ease;
     }
 
     .search-bar:focus-within .search-input::placeholder {
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(100, 116, 139, 0.8);
     }
 
+    /* Dark blue accent login button */
     .login-btn {
       display: flex;
       align-items: center;
       gap: 10px;
-      background: linear-gradient(135deg, rgba(100, 180, 255, 0.2) 0%, rgba(100, 180, 255, 0.1) 100%);
-      border: 1px solid rgba(100, 180, 255, 0.3);
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.15) 0%, rgba(59, 130, 246, 0.1) 100%);
+      border: 1px solid rgba(30, 58, 138, 0.3);
       border-radius: 50px;
       padding: 12px 28px;
-      color: white;
+      color: #0f172a;
       font-size: 14px;
       font-weight: 600;
       cursor: pointer;
@@ -292,7 +306,7 @@
       left: 50%;
       width: 0;
       height: 0;
-      background: rgba(100, 180, 255, 0.3);
+      background: rgba(30, 58, 138, 0.2);
       border-radius: 50%;
       transform: translate(-50%, -50%);
       transition: width 0.6s ease, height 0.6s ease;
@@ -304,9 +318,9 @@
     }
 
     .login-btn:hover {
-      background: linear-gradient(135deg, rgba(100, 180, 255, 0.4) 0%, rgba(100, 180, 255, 0.2) 100%);
-      border-color: rgba(100, 180, 255, 0.6);
-      box-shadow: 0 0 30px rgba(100, 180, 255, 0.4), 0 0 60px rgba(100, 180, 255, 0.2);
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.25) 0%, rgba(59, 130, 246, 0.15) 100%);
+      border-color: rgba(30, 58, 138, 0.5);
+      box-shadow: 0 0 30px rgba(30, 58, 138, 0.2), 0 0 60px rgba(30, 58, 138, 0.1);
       transform: translateY(-2px) scale(1.02);
     }
 
@@ -318,7 +332,7 @@
       width: 18px;
       height: 18px;
       fill: none;
-      stroke: white;
+      stroke: #0f172a;
       stroke-width: 2;
       position: relative;
       z-index: 1;
@@ -326,7 +340,7 @@
     }
 
     .login-btn:hover svg {
-      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+      filter: drop-shadow(0 0 8px rgba(30, 58, 138, 0.6));
       transform: scale(1.1);
     }
 
@@ -335,11 +349,12 @@
       z-index: 1;
     }
 
+    /* Light account button */
     .account-btn {
       width: 48px;
       height: 48px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(241, 245, 249, 0.8);
+      border: 1px solid rgba(203, 213, 225, 0.6);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -350,12 +365,13 @@
       animation: slideIn 0.6s ease-out 0.3s both;
     }
 
+    /* Account button hover with dark blue */
     .account-btn::before {
       content: '';
       position: absolute;
       inset: -3px;
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(100, 180, 255, 0.5), transparent, rgba(100, 180, 255, 0.5));
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), transparent, rgba(30, 58, 138, 0.4));
       opacity: 0;
       transition: all 0.4s ease;
       z-index: -1;
@@ -371,9 +387,9 @@
     }
 
     .account-btn:hover {
-      background: rgba(100, 180, 255, 0.15);
-      border-color: rgba(100, 180, 255, 0.5);
-      box-shadow: 0 0 30px rgba(100, 180, 255, 0.4), 0 0 60px rgba(100, 180, 255, 0.2);
+      background: rgba(30, 58, 138, 0.1);
+      border-color: rgba(30, 58, 138, 0.4);
+      box-shadow: 0 0 30px rgba(30, 58, 138, 0.2), 0 0 60px rgba(30, 58, 138, 0.1);
       transform: scale(1.1) rotate(5deg);
     }
 
@@ -386,22 +402,23 @@
       width: 22px;
       height: 22px;
       fill: none;
-      stroke: rgba(255, 255, 255, 0.8);
+      stroke: rgba(15, 23, 42, 0.7);
       stroke-width: 2;
       transition: all 0.3s ease;
     }
 
     .account-btn:hover svg {
-      stroke: white;
-      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+      stroke: #0f172a;
+      filter: drop-shadow(0 0 10px rgba(30, 58, 138, 0.5));
       transform: scale(1.1);
     }
 
+    /* Light nav bar */
     .nav-bar {
       display: flex;
       justify-content: center;
       padding: 18px 60px;
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(248, 250, 252, 0.6);
       position: relative;
     }
 
@@ -413,7 +430,7 @@
       transform: translateX(-50%);
       width: 80%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(203, 213, 225, 0.5), transparent);
     }
 
     .nav-links {
@@ -434,8 +451,9 @@
     .nav-item:nth-child(5) { animation-delay: 0.3s; }
     .nav-item:nth-child(6) { animation-delay: 0.35s; }
 
+    /* Dark nav links with dark blue accent */
     .nav-link {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(71, 85, 105, 0.8);
       text-decoration: none;
       font-size: 13px;
       font-weight: 600;
@@ -456,7 +474,7 @@
       left: 50%;
       width: 0;
       height: 2px;
-      background: linear-gradient(90deg, transparent, #64b4ff, transparent);
+      background: linear-gradient(90deg, transparent, #1e3a8a, transparent);
       transform: translateX(-50%);
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       border-radius: 2px;
@@ -469,21 +487,21 @@
       left: 50%;
       width: 0;
       height: 6px;
-      background: radial-gradient(ellipse at center, rgba(100, 180, 255, 0.4) 0%, transparent 70%);
+      background: radial-gradient(ellipse at center, rgba(30, 58, 138, 0.3) 0%, transparent 70%);
       transform: translateX(-50%);
       transition: all 0.4s ease;
       filter: blur(3px);
     }
 
     .nav-link:hover {
-      color: white;
-      text-shadow: 0 0 20px rgba(100, 180, 255, 0.8), 0 0 40px rgba(100, 180, 255, 0.4);
+      color: #0f172a;
+      text-shadow: 0 0 20px rgba(30, 58, 138, 0.4), 0 0 40px rgba(30, 58, 138, 0.2);
       transform: translateY(-2px);
     }
 
     .nav-link:hover::before {
       width: 100%;
-      box-shadow: 0 0 15px rgba(100, 180, 255, 0.8), 0 0 30px rgba(100, 180, 255, 0.4);
+      box-shadow: 0 0 15px rgba(30, 58, 138, 0.5), 0 0 30px rgba(30, 58, 138, 0.2);
     }
 
     .nav-link:hover::after {
@@ -491,48 +509,54 @@
     }
 
     .nav-link.active {
-      color: white;
+      color: #0f172a;
     }
 
     .nav-link.active::before {
       width: 100%;
-      background: linear-gradient(90deg, transparent, #64b4ff, transparent);
+      background: linear-gradient(90deg, transparent, #1e3a8a, transparent);
     }
 
+    /* Dark blue nav divider */
     .nav-divider {
       width: 4px;
       height: 4px;
-      background: rgba(100, 180, 255, 0.3);
+      background: rgba(30, 58, 138, 0.3);
       border-radius: 50%;
       animation: float 2s ease-in-out infinite;
     }
 
+    /* Dark blue product glow */
     @keyframes productGlow {
       0%, 100% {
-        filter: drop-shadow(0 0 15px rgba(100, 180, 255, 0.3)) drop-shadow(0 0 30px rgba(50, 130, 255, 0.2));
+        filter: drop-shadow(0 0 15px rgba(30, 58, 138, 0.2)) drop-shadow(0 0 30px rgba(59, 130, 246, 0.1));
       }
       50% {
-        filter: drop-shadow(0 0 25px rgba(100, 180, 255, 0.5)) drop-shadow(0 0 50px rgba(50, 130, 255, 0.3));
+        filter: drop-shadow(0 0 25px rgba(30, 58, 138, 0.3)) drop-shadow(0 0 50px rgba(59, 130, 246, 0.2));
       }
     }
 
+    /* Light hero section */
     .nexus-hero-section {
       position: relative;
-      min-height: calc(100vh - 140px);
+      /* Reduced hero height from near-full viewport to 70vh */
+      min-height: calc(55vh - 140px);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 40px 100px 100px 100px;
+      /* Reduced vertical padding further */
+      padding: 20px 100px 40px 100px;
       overflow: hidden;
       perspective: 1400px;
-      background: #102035;
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
     }
 
+    /* Soft dark blue glow orbs */
     .nexus-glow-left, .nexus-glow-right {
       position: absolute;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 70%);
+      background: radial-gradient(circle, rgba(30, 58, 138, 0.08), transparent 70%);
       filter: blur(100px);
       animation: nexus-pulse 8s infinite alternate;
       z-index: 0;
@@ -560,9 +584,10 @@
       }
     }
 
+    /* Dark text for hero */
     .nexus-content {
       max-width: 50%;
-      color: white;
+      color: #0f172a;
       transform-style: preserve-3d;
       z-index: 2;
     }
@@ -570,20 +595,23 @@
     .nexus-logo {
       font-size: 1rem;
       letter-spacing: 6px;
-      opacity: 0.6;
+      opacity: 0.5;
       margin-bottom: 30px;
+      color: #3c4653;
     }
 
+    /* Dark headline with dark blue gradient */
     .nexus-headline {
       font-size: 5rem;
       font-weight: 800;
       line-height: 1.05;
       transform: rotateX(12deg);
-      text-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 255, 255, 0.15);
+      text-shadow: 0 20px 50px rgba(0, 0, 0, 0.1), 0 0 30px rgba(30, 58, 138, 0.1);
+      color: #0f172a;
     }
 
     .nexus-headline span {
-      background: linear-gradient(90deg, #fff, #9fb8ff);
+      background: linear-gradient(90deg, #0f172a, #1e3a8a);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -591,9 +619,10 @@
     .nexus-tagline {
       margin-top: 30px;
       font-size: 1.2rem;
-      opacity: 0.75;
+      opacity: 0.7;
       line-height: 1.6;
       max-width: 450px;
+      color: #3c4653;
     }
 
     .nexus-visual {
@@ -618,13 +647,15 @@
       animation: productGlow 3s ease-in-out infinite;
     }
 
+    /* Light products section */
     .most-searched-section {
       padding: 100px 60px;
-      background: linear-gradient(180deg, #102035 0%, #0a1628 100%);
+      background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
       position: relative;
       overflow: hidden;
     }
 
+    /* Dark blue section line */
     .most-searched-section::before {
       content: '';
       position: absolute;
@@ -632,7 +663,7 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(100, 180, 255, 0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.3), transparent);
     }
 
     .section-header {
@@ -640,21 +671,23 @@
       margin-bottom: 80px;
     }
 
+    /* Dark blue subtitle */
     .section-subtitle {
       font-size: 12px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: rgba(100, 180, 255, 0.8);
+      color: rgba(30, 58, 138, 0.9);
       margin-bottom: 15px;
       font-weight: 600;
     }
 
+    /* Dark title with dark blue gradient */
     .section-title {
       font-family: 'Inter', sans-serif;
       font-size: 3rem;
       font-weight: 700;
-      color: white;
-      background: linear-gradient(90deg, #ffffff, #64b4ff, #ffffff);
+      color: #0f172a;
+      background: linear-gradient(90deg, #0f172a, #1e3a8a, #0f172a);
       background-size: 200% auto;
       -webkit-background-clip: text;
       background-clip: text;
@@ -663,13 +696,14 @@
       transition: all 0.3s ease;
     }
 
+    /* Dark blue section line */
     .section-line {
       width: 100px;
       height: 3px;
-      background: linear-gradient(90deg, transparent, #64b4ff, transparent);
+      background: linear-gradient(90deg, transparent, #1e3a8a, transparent);
       margin: 25px auto 0;
       border-radius: 3px;
-      box-shadow: 0 0 20px rgba(100, 180, 255, 0.5);
+      box-shadow: 0 0 20px rgba(30, 58, 138, 0.3);
     }
 
     .products-container {
@@ -680,31 +714,33 @@
       justify-content: center;
     }
 
+    /* Light center card with dark blue border */
     .center-card {
       position: absolute;
       width: 280px;
       height: 380px;
-      background: linear-gradient(145deg, rgba(20, 40, 70, 0.9), rgba(10, 22, 40, 0.95));
-      border: 1px solid rgba(100, 180, 255, 0.3);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.98));
+      border: 1px solid rgba(30, 58, 138, 0.2);
       border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      box-shadow: 0 0 40px rgba(100, 180, 255, 0.2), 0 20px 60px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 40px rgba(30, 58, 138, 0.1), 0 20px 60px rgba(0, 0, 0, 0.08);
       z-index: 10;
     }
 
     .center-card-content {
       text-align: center;
-      color: white;
+      color: #0f172a;
     }
 
+    /* Dark blue icon container */
     .center-card-icon {
       width: 80px;
       height: 80px;
       margin: 0 auto 20px;
-      background: linear-gradient(135deg, rgba(100, 180, 255, 0.2), rgba(100, 180, 255, 0.05));
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.15), rgba(59, 130, 246, 0.08));
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -715,7 +751,7 @@
     .center-card-icon svg {
       width: 40px;
       height: 40px;
-      stroke: #64b4ff;
+      stroke: #1e3a8a;
       fill: none;
       stroke-width: 1.5;
     }
@@ -724,6 +760,7 @@
       font-family: 'Inter', sans-serif;
       font-size: 1.2rem;
       letter-spacing: 2px;
+      color: #0f172a;
     }
 
     .center-card.hidden {
@@ -749,9 +786,10 @@
       transform: scale(1);
     }
 
+    /* Light product cards */
     .product-card {
-      background: linear-gradient(145deg, rgba(20, 40, 70, 0.8), rgba(10, 22, 40, 0.9));
-      border: 1px solid rgba(100, 180, 255, 0.15);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+      border: 1px solid rgba(203, 213, 225, 0.5);
       border-radius: 20px;
       padding: 25px;
       position: relative;
@@ -767,6 +805,7 @@
       transform: translateY(0) scale(1);
     }
 
+    /* Product card hover with dark blue */
     .product-card::before {
       content: '';
       position: absolute;
@@ -774,7 +813,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(100, 180, 255, 0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.05), transparent);
       transition: left 0.7s ease;
     }
 
@@ -788,7 +827,7 @@
       inset: 0;
       border-radius: 20px;
       padding: 2px;
-      background: linear-gradient(135deg, rgba(100, 180, 255, 0.5), transparent, rgba(100, 180, 255, 0.5));
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), transparent, rgba(59, 130, 246, 0.4));
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
@@ -803,15 +842,16 @@
 
     .product-card:hover {
       transform: translateY(-15px) scale(1.03);
-      border-color: rgba(100, 180, 255, 0.5);
-      box-shadow: 0 0 50px rgba(100, 180, 255, 0.3), 0 30px 60px rgba(0, 0, 0, 0.4);
+      border-color: rgba(30, 58, 138, 0.4);
+      box-shadow: 0 0 50px rgba(30, 58, 138, 0.15), 0 30px 60px rgba(0, 0, 0, 0.1);
     }
 
+    /* Dark blue badge */
     .product-badge {
       position: absolute;
       top: 15px;
       left: 15px;
-      background: linear-gradient(135deg, #64b4ff, #3d8dff);
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
       color: white;
       padding: 6px 14px;
       border-radius: 30px;
@@ -820,17 +860,18 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       z-index: 2;
-      box-shadow: 0 4px 15px rgba(100, 180, 255, 0.4);
+      box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
     }
 
+    /* Light wishlist button */
     .product-wishlist {
       position: absolute;
       top: 15px;
       right: 15px;
       width: 40px;
       height: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(241, 245, 249, 0.9);
+      border: 1px solid rgba(203, 213, 225, 0.5);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -841,25 +882,26 @@
     }
 
     .product-wishlist:hover {
-      background: rgba(255, 100, 100, 0.2);
-      border-color: rgba(255, 100, 100, 0.5);
+      background: rgba(244, 63, 94, 0.1);
+      border-color: rgba(244, 63, 94, 0.4);
       transform: scale(1.15);
     }
 
     .product-wishlist svg {
       width: 18px;
       height: 18px;
-      stroke: rgba(255, 255, 255, 0.7);
+      stroke: rgba(100, 116, 139, 0.7);
       fill: none;
       stroke-width: 2;
       transition: all 0.3s ease;
     }
 
     .product-wishlist:hover svg {
-      stroke: #ff6b6b;
-      fill: rgba(255, 107, 107, 0.3);
+      stroke: #f43f5e;
+      fill: rgba(244, 63, 94, 0.2);
     }
 
+    /* Light image container with dark blue tint */
     .product-image-container {
       position: relative;
       height: 180px;
@@ -869,7 +911,7 @@
       margin-bottom: 20px;
       overflow: hidden;
       border-radius: 15px;
-      background: linear-gradient(135deg, rgba(100, 180, 255, 0.05), rgba(100, 180, 255, 0.02));
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.03), rgba(59, 130, 246, 0.02));
     }
 
     .product-image {
@@ -877,12 +919,13 @@
       max-height: 150px;
       object-fit: contain;
       transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
     }
 
+    /* Product image hover with dark blue shadow */
     .product-card:hover .product-image {
       transform: scale(1.1) translateY(-10px) rotateY(10deg);
-      filter: drop-shadow(0 20px 40px rgba(100, 180, 255, 0.3));
+      filter: drop-shadow(0 20px 40px rgba(30, 58, 138, 0.2));
     }
 
     .product-info {
@@ -890,25 +933,28 @@
       z-index: 1;
     }
 
+    /* Dark blue category text */
     .product-category {
       font-size: 11px;
-      color: rgba(100, 180, 255, 0.8);
+      color: rgba(30, 58, 138, 0.9);
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 8px;
       font-weight: 600;
     }
 
+    /* Dark product name */
     .product-name {
       font-size: 1.1rem;
       font-weight: 700;
-      color: white;
+      color: #0f172a;
       margin-bottom: 12px;
       transition: all 0.3s ease;
     }
 
+    /* Product name hover to dark blue */
     .product-card:hover .product-name {
-      color: #64b4ff;
+      color: #1e3a8a;
     }
 
     .product-rating {
@@ -923,21 +969,23 @@
       gap: 3px;
     }
 
+    /* Amber stars kept for visibility */
     .star {
       width: 14px;
       height: 14px;
-      fill: #ffc107;
-      filter: drop-shadow(0 0 3px rgba(255, 193, 7, 0.5));
+      fill: #f59e0b;
+      filter: drop-shadow(0 0 3px rgba(245, 158, 11, 0.4));
     }
 
     .star.empty {
-      fill: rgba(255, 255, 255, 0.2);
+      fill: rgba(203, 213, 225, 0.5);
       filter: none;
     }
 
+    /* Dark rating count */
     .rating-count {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(100, 116, 139, 0.7);
     }
 
     .product-price-row {
@@ -947,24 +995,26 @@
       margin-bottom: 20px;
     }
 
+    /* Dark price */
     .product-price {
       font-family: 'Inter', sans-serif;
       font-size: 1.4rem;
       font-weight: 700;
-      color: white;
+      color: #0f172a;
     }
 
     .product-price-old {
       font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(100, 116, 139, 0.5);
       text-decoration: line-through;
       margin-left: 10px;
       font-family: 'Inter', sans-serif;
     }
 
+    /* Emerald stock indicator */
     .product-stock {
       font-size: 11px;
-      color: #4ade80;
+      color: #10b981;
       font-weight: 600;
       display: flex;
       align-items: center;
@@ -974,7 +1024,7 @@
     .stock-dot {
       width: 6px;
       height: 6px;
-      background: #4ade80;
+      background: #10b981;
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
@@ -984,13 +1034,14 @@
       50% { opacity: 0.5; }
     }
 
+    /* Dark blue add to cart button */
     .add-to-cart-btn {
       width: 100%;
       padding: 14px 20px;
-      background: linear-gradient(135deg, rgba(100, 180, 255, 0.2), rgba(100, 180, 255, 0.1));
-      border: 1px solid rgba(100, 180, 255, 0.3);
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.15), rgba(59, 130, 246, 0.1));
+      border: 1px solid rgba(30, 58, 138, 0.3);
       border-radius: 12px;
-      color: white;
+      color: #0f172a;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 1px;
@@ -1012,7 +1063,7 @@
       left: 50%;
       width: 0;
       height: 0;
-      background: rgba(100, 180, 255, 0.4);
+      background: rgba(30, 58, 138, 0.25);
       border-radius: 50%;
       transform: translate(-50%, -50%);
       transition: all 0.5s ease;
@@ -1024,9 +1075,9 @@
     }
 
     .add-to-cart-btn:hover {
-      background: linear-gradient(135deg, rgba(100, 180, 255, 0.4), rgba(100, 180, 255, 0.2));
-      border-color: rgba(100, 180, 255, 0.6);
-      box-shadow: 0 0 30px rgba(100, 180, 255, 0.4);
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.25), rgba(59, 130, 246, 0.15));
+      border-color: rgba(30, 58, 138, 0.5);
+      box-shadow: 0 0 30px rgba(30, 58, 138, 0.2);
       transform: translateY(-3px);
     }
 
@@ -1037,7 +1088,7 @@
     .add-to-cart-btn svg {
       width: 18px;
       height: 18px;
-      stroke: white;
+      stroke: #0f172a;
       fill: none;
       stroke-width: 2;
       position: relative;
@@ -1054,13 +1105,68 @@
       z-index: 1;
     }
 
+    /* Added hamburger menu button styles */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(241, 245, 249, 0.9);
+      border: 1px solid rgba(203, 213, 225, 0.5);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      gap: 5px;
+    }
+
+    .menu-toggle:hover {
+      background: rgba(30, 58, 138, 0.1);
+      border-color: rgba(30, 58, 138, 0.3);
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #0f172a;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
     @media (max-width: 1200px) {
       .products-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
 
+    /* Enhanced tablet breakpoint */
     @media (max-width: 1000px) {
+      .top-bar {
+        padding: 15px 30px;
+      }
+
+      .nav-bar {
+        padding: 12px 30px;
+      }
+
+      .nav-links {
+        gap: 30px;
+      }
+
       .nexus-hero-section {
         flex-direction: column;
         padding: 30px 40px 60px 40px;
@@ -1089,22 +1195,2575 @@
       }
     }
 
+    /* Added 768px breakpoint for mobile header */
+    @media (max-width: 768px) {
+      .top-bar {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .logo-text {
+        font-size: 24px;
+        letter-spacing: 4px;
+      }
+
+      .logo-image {
+        width: 40px;
+        height: 40px;
+      }
+
+      .logo-image svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .search-container {
+        order: 3;
+        width: 100%;
+      }
+
+      .search-bar {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .search-input {
+        width: 100%;
+      }
+
+      .right-section {
+        gap: 12px;
+      }
+
+      .login-btn {
+        padding: 8px 16px;
+        font-size: 11px;
+      }
+
+      .login-btn span {
+        display: none;
+      }
+
+      .login-btn svg {
+        margin-right: 0;
+      }
+
+      .account-btn {
+        width: 36px;
+        height: 36px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-bar {
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+      }
+
+      .nav-bar.active {
+        max-height: 400px;
+        padding: 15px 20px;
+        border-top: 1px solid rgba(203, 213, 225, 0.4);
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+      }
+
+      .nav-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(203, 213, 225, 0.3);
+      }
+
+      .nav-item:last-child {
+        border-bottom: none;
+      }
+
+      .nav-link {
+        padding: 15px 10px;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .nexus-hero-section {
+        padding: 20px 20px 40px 20px;
+        min-height: auto;
+      }
+
+      .nexus-content {
+        text-align: center;
+      }
+
+      .nexus-headline {
+        font-size: 2.8rem;
+      }
+
+      .nexus-tagline {
+        font-size: 0.95rem;
+      }
+
+      .nexus-visual {
+        height: 300px;
+        margin-top: 30px;
+      }
+
+      .nexus-item-single {
+        width: 300px;
+      }
+
+      .nexus-cta-group {
+        justify-content: center;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 10px;
+      }
+
+      .product-card {
+        padding: 15px;
+      }
+
+      .product-image-container {
+        height: 140px;
+      }
+
+      .product-image {
+        max-height: 120px;
+      }
+
+      .product-name {
+        font-size: 0.95rem;
+      }
+
+      .most-searched-section {
+        padding: 40px 20px;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+    }
+
+    /* Enhanced small mobile breakpoint */
     @media (max-width: 600px) {
       .products-grid {
         grid-template-columns: 1fr;
         max-width: 350px;
+        margin: 0 auto;
+      }
+
+      .product-card {
+        padding: 20px;
+      }
+
+      .product-image-container {
+        height: 160px;
+      }
+
+      .product-image {
+        max-height: 140px;
+      }
+    }
+
+    /* Enhanced extra small mobile breakpoint */
+    @media (max-width: 500px) {
+      .top-bar {
+        padding: 10px 15px;
+      }
+
+      .logo-text {
+        font-size: 20px;
+        letter-spacing: 3px;
+      }
+
+      .logo-image {
+        width: 36px;
+        height: 36px;
+      }
+
+      .logo-section {
+        gap: 10px;
+      }
+
+      .nexus-headline {
+        font-size: 2.2rem;
+      }
+
+      .nexus-tagline {
+        font-size: 0.9rem;
+      }
+
+      .nexus-item-single {
+        width: 240px;
+      }
+
+      .nexus-visual {
+        height: 250px;
+      }
+
+      .nexus-cta {
+        padding: 14px 28px;
+        font-size: 13px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .product-badge {
+        padding: 4px 10px;
+        font-size: 10px;
+      }
+
+      .product-wishlist {
+        width: 34px;
+        height: 34px;
+      }
+
+      .add-to-cart-btn {
+        padding: 10px 16px;
+        font-size: 12px;
+      }
+    }
+
+    /* Added extra small screen support */
+    @media (max-width: 380px) {
+      .logo-text {
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+
+      .nexus-headline {
+        font-size: 1.9rem;
+      }
+
+      .nexus-item-single {
+        width: 200px;
+      }
+
+      .products-grid {
+        max-width: 300px;
+      }
+    }
+
+    /* ============================================
+       GLOBAL NEW SECTION ANIMATIONS
+       ============================================ */
+    @keyframes nxFadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes nxFadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes nxFadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes nxScaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes nxFloatSoft {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes nxPulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(30, 58, 138, 0.2);
+      }
+      50% {
+        box-shadow: 0 0 40px rgba(30, 58, 138, 0.4), 0 0 60px rgba(59, 130, 246, 0.2);
+      }
+    }
+
+    @keyframes nxIconBounce {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.15);
+      }
+    }
+
+    @keyframes nxUnderlineExpand {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes nxCountUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes nxRotateSlow {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes nxShimmerBg {
+      0% {
+        background-position: -200% center;
+      }
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    /* ============================================
+       SECTION 1: EXPLORE BY CATEGORY
+       ============================================ */
+    .explore-categories-wrapper {
+      padding: 120px 60px;
+      background: linear-gradient(180deg, #e2e8f0 0%, #f1f5f9 50%, #f8fafc 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .explore-categories-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.3), transparent);
+    }
+
+    .explore-categories-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -200px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(30, 58, 138, 0.05), transparent 70%);
+      filter: blur(80px);
+      animation: nxFloatSoft 8s ease-in-out infinite;
+    }
+
+    .explore-categories-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .explore-categories-heading {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .explore-categories-label {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(30, 58, 138, 0.9);
+      margin-bottom: 15px;
+      font-weight: 600;
+      display: block;
+    }
+
+    .explore-categories-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #0f172a;
+      background: linear-gradient(90deg, #0f172a, #1e3a8a, #0f172a);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .explore-categories-desc {
+      font-size: 1.1rem;
+      color: #475569;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .explore-categories-divider {
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #1e3a8a, transparent);
+      margin: 30px auto 0;
+      border-radius: 3px;
+      box-shadow: 0 0 20px rgba(30, 58, 138, 0.3);
+    }
+
+    .explore-categories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .explore-category-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.98));
+      border: 1px solid rgba(30, 58, 138, 0.15);
+      border-radius: 24px;
+      padding: 40px 30px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .explore-category-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #1e3a8a, #3b82f6, #1e3a8a);
+      transform: scaleX(0);
+      transition: transform 0.5s ease;
+    }
+
+    .explore-category-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.03), transparent);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .explore-category-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      border-color: rgba(30, 58, 138, 0.4);
+      box-shadow: 0 30px 60px rgba(30, 58, 138, 0.15), 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .explore-category-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .explore-category-card:hover::after {
+      opacity: 1;
+    }
+
+    .explore-category-icon {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 25px;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.12), rgba(59, 130, 246, 0.06));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .explore-category-card:hover .explore-category-icon {
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(59, 130, 246, 0.12));
+      animation: nxIconBounce 0.6s ease;
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.2);
+    }
+
+    .explore-category-icon svg {
+      width: 45px;
+      height: 45px;
+      stroke: #1e3a8a;
+      fill: none;
+      stroke-width: 1.5;
+      transition: all 0.3s ease;
+    }
+
+    .explore-category-card:hover .explore-category-icon svg {
+      stroke: #1e3a8a;
+      filter: drop-shadow(0 0 10px rgba(30, 58, 138, 0.4));
+    }
+
+    .explore-category-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .explore-category-count {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .explore-category-excerpt {
+      font-size: 0.85rem;
+      color: #475569;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ============================================
+       SECTION 2: WHY CHOOSE US
+       ============================================ */
+    .why-choose-wrapper {
+      padding: 120px 60px;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-choose-wrapper::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.2), transparent);
+    }
+
+    .why-choose-glow-orb {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(30, 58, 138, 0.04), transparent 70%);
+      filter: blur(100px);
+      right: -200px;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: nxFloatSoft 10s ease-in-out infinite;
+    }
+
+    .why-choose-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .why-choose-heading {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .why-choose-label {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(30, 58, 138, 0.9);
+      margin-bottom: 15px;
+      font-weight: 600;
+      display: block;
+    }
+
+    .why-choose-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #0f172a;
+      background: linear-gradient(90deg, #0f172a, #1e3a8a, #0f172a);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .why-choose-subtitle {
+      font-size: 1.1rem;
+      color: #475569;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .why-choose-divider {
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #1e3a8a, transparent);
+      margin: 30px auto 0;
+      border-radius: 3px;
+      box-shadow: 0 0 20px rgba(30, 58, 138, 0.3);
+    }
+
+    .why-choose-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 35px;
+    }
+
+    .why-choose-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+      border: 1px solid rgba(30, 58, 138, 0.12);
+      border-radius: 20px;
+      padding: 45px 35px;
+      text-align: center;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-choose-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(30, 58, 138, 0.03), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+
+    .why-choose-card:hover::before {
+      opacity: 1;
+      animation: nxShimmerBg 1.5s linear;
+    }
+
+    .why-choose-card:hover {
+      transform: translateY(-12px);
+      border-color: rgba(30, 58, 138, 0.3);
+      box-shadow: 0 25px 50px rgba(30, 58, 138, 0.12), 0 10px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .why-choose-icon-box {
+      width: 85px;
+      height: 85px;
+      margin: 0 auto 28px;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(59, 130, 246, 0.05));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease;
+      position: relative;
+    }
+
+    .why-choose-card:hover .why-choose-icon-box {
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.18), rgba(59, 130, 246, 0.1));
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 15px 35px rgba(30, 58, 138, 0.2);
+    }
+
+    .why-choose-icon-box svg {
+      width: 40px;
+      height: 40px;
+      stroke: #1e3a8a;
+      fill: none;
+      stroke-width: 1.5;
+      transition: all 0.3s ease;
+    }
+
+    .why-choose-card:hover .why-choose-icon-box svg {
+      filter: drop-shadow(0 0 8px rgba(30, 58, 138, 0.5));
+    }
+
+    .why-choose-card-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 15px;
+    }
+
+    .why-choose-card-text {
+      font-size: 0.95rem;
+      color: #64748b;
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       SECTION 3: SPLIT CONTENT (TEXT + VISUAL)
+       ============================================ */
+    .split-content-wrapper {
+      padding: 120px 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .split-content-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.4), transparent);
+    }
+
+    .split-content-wrapper::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.4), transparent);
+    }
+
+    .split-content-glow-left {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(30, 58, 138, 0.15), transparent 70%);
+      filter: blur(120px);
+      left: -300px;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: nxFloatSoft 12s ease-in-out infinite;
+    }
+
+    .split-content-glow-right {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.1), transparent 70%);
+      filter: blur(100px);
+      right: -200px;
+      bottom: -100px;
+      animation: nxFloatSoft 10s ease-in-out infinite reverse;
+    }
+
+    .split-content-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .split-content-text {
+      color: #f8fafc;
+    }
+
+    .split-content-label {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(59, 130, 246, 0.9);
+      margin-bottom: 20px;
+      font-weight: 600;
+      display: block;
+    }
+
+    .split-content-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      background: linear-gradient(90deg, #f8fafc, #94a3b8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .split-content-desc {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      line-height: 1.9;
+      margin-bottom: 25px;
+    }
+
+    .split-content-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px 0;
+    }
+
+    .split-content-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: #cbd5e1;
+    }
+
+    .split-content-check {
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(30, 58, 138, 0.2));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .split-content-check svg {
+      width: 14px;
+      height: 14px;
+      stroke: #3b82f6;
+      fill: none;
+      stroke-width: 3;
+    }
+
+    .split-content-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      border: none;
+      border-radius: 50px;
+      padding: 16px 35px;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .split-content-cta-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .split-content-cta-btn:hover::before {
+      opacity: 1;
+    }
+
+    .split-content-cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3), 0 0 30px rgba(59, 130, 246, 0.2);
+    }
+
+    .split-content-cta-btn span,
+    .split-content-cta-btn svg {
+      position: relative;
+      z-index: 1;
+    }
+
+    .split-content-cta-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .split-content-cta-btn:hover svg {
+      transform: translateX(5px);
+    }
+
+    .split-content-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .split-content-image-box {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      aspect-ratio: 1;
+      background: linear-gradient(145deg, rgba(30, 58, 138, 0.2), rgba(15, 23, 42, 0.8));
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      animation: nxPulseGlow 4s ease-in-out infinite;
+    }
+
+    .split-content-image-box img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+      animation: nxFloatSoft 4s ease-in-out infinite;
+    }
+
+    .split-content-floating-badge {
+      position: absolute;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.98));
+      border: 1px solid rgba(30, 58, 138, 0.2);
+      border-radius: 16px;
+      padding: 18px 22px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      animation: nxFloatSoft 5s ease-in-out infinite;
+    }
+
+    .split-content-floating-badge.badge-top {
+      top: -20px;
+      right: -20px;
+      animation-delay: 0s;
+    }
+
+    .split-content-floating-badge.badge-bottom {
+      bottom: -20px;
+      left: -20px;
+      animation-delay: 2s;
+    }
+
+    .split-content-badge-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #1e3a8a;
+      display: block;
+    }
+
+    .split-content-badge-label {
+      font-size: 0.8rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ============================================
+       SECTION 4: HOW IT WORKS
+       ============================================ */
+    .how-works-wrapper {
+      padding: 120px 60px;
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .how-works-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.3), transparent);
+    }
+
+    .how-works-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .how-works-heading {
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    .how-works-label {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(30, 58, 138, 0.9);
+      margin-bottom: 15px;
+      font-weight: 600;
+      display: block;
+    }
+
+    .how-works-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #0f172a;
+      background: linear-gradient(90deg, #0f172a, #1e3a8a, #0f172a);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .how-works-subtitle {
+      font-size: 1.1rem;
+      color: #475569;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .how-works-divider {
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #1e3a8a, transparent);
+      margin: 30px auto 0;
+      border-radius: 3px;
+      box-shadow: 0 0 20px rgba(30, 58, 138, 0.3);
+    }
+
+    .how-works-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      position: relative;
+    }
+
+    .how-works-steps::before {
+      content: '';
+      position: absolute;
+      top: 70px;
+      left: 15%;
+      right: 15%;
+      height: 3px;
+      background: linear-gradient(90deg, rgba(30, 58, 138, 0.1), rgba(30, 58, 138, 0.3), rgba(30, 58, 138, 0.3), rgba(30, 58, 138, 0.1));
+      border-radius: 3px;
+      z-index: 0;
+    }
+
+    .how-works-step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .how-works-step-number {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 35px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+      border: 2px solid rgba(30, 58, 138, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: all 0.5s ease;
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.1);
+    }
+
+    .how-works-step:hover .how-works-step-number {
+      border-color: rgba(30, 58, 138, 0.4);
+      box-shadow: 0 20px 50px rgba(30, 58, 138, 0.2);
+      transform: scale(1.08);
+    }
+
+    .how-works-step-number::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px dashed rgba(30, 58, 138, 0.2);
+      border-radius: 50%;
+      transition: all 0.5s ease;
+    }
+
+    .how-works-step:hover .how-works-step-number::before {
+      border-color: rgba(30, 58, 138, 0.4);
+      animation: nxRotateSlow 20s linear infinite;
+    }
+
+    .how-works-num-text {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: #1e3a8a;
+      line-height: 1;
+    }
+
+    .how-works-step-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 15px;
+    }
+
+    .how-works-step-desc {
+      font-size: 0.95rem;
+      color: #64748b;
+      line-height: 1.7;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    /* ============================================
+       SECTION 5: SOCIAL PROOF / TESTIMONIALS
+       ============================================ */
+    .social-proof-wrapper {
+      padding: 120px 60px;
+      background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-proof-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.3), transparent);
+    }
+
+    .social-proof-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(30, 58, 138, 0.05), transparent 70%);
+      filter: blur(100px);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      animation: nxFloatSoft 10s ease-in-out infinite;
+    }
+
+    .social-proof-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .social-proof-heading {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .social-proof-label {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(30, 58, 138, 0.9);
+      margin-bottom: 15px;
+      font-weight: 600;
+      display: block;
+    }
+
+    .social-proof-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #0f172a;
+      background: linear-gradient(90deg, #0f172a, #1e3a8a, #0f172a);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .social-proof-subtitle {
+      font-size: 1.1rem;
+      color: #475569;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .social-proof-divider {
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #1e3a8a, transparent);
+      margin: 30px auto 0;
+      border-radius: 3px;
+      box-shadow: 0 0 20px rgba(30, 58, 138, 0.3);
+    }
+
+    .social-proof-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+
+    .social-proof-stat {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.95));
+      border: 1px solid rgba(30, 58, 138, 0.1);
+      border-radius: 20px;
+      transition: all 0.4s ease;
+    }
+
+    .social-proof-stat:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(30, 58, 138, 0.1);
+      border-color: rgba(30, 58, 138, 0.25);
+    }
+
+    .social-proof-stat-value {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .social-proof-stat-label {
+      font-size: 1rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .social-proof-testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .testimonial-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+      border: 1px solid rgba(30, 58, 138, 0.12);
+      border-radius: 24px;
+      padding: 40px;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 8rem;
+      font-family: Georgia, serif;
+      color: rgba(30, 58, 138, 0.06);
+      line-height: 1;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(30, 58, 138, 0.3);
+      box-shadow: 0 25px 50px rgba(30, 58, 138, 0.12);
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-stars svg {
+      width: 20px;
+      height: 20px;
+      fill: #f59e0b;
+    }
+
+    .testimonial-text {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .testimonial-avatar {
+      width: 55px;
+      height: 55px;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.15), rgba(59, 130, 246, 0.1));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e3a8a;
+    }
+
+    .testimonial-author-info {
+      flex: 1;
+    }
+
+    .testimonial-author-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 3px;
+    }
+
+    .testimonial-author-role {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    /* ============================================
+       SECTION 6: CALL TO ACTION
+       ============================================ */
+    .cta-section-wrapper {
+      padding: 120px 60px;
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e3a8a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    .cta-glow-orb-1 {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+      filter: blur(100px);
+      left: -200px;
+      top: -200px;
+      animation: nxFloatSoft 10s ease-in-out infinite;
+    }
+
+    .cta-glow-orb-2 {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 70%);
+      filter: blur(80px);
+      right: -150px;
+      bottom: -150px;
+      animation: nxFloatSoft 8s ease-in-out infinite reverse;
+    }
+
+    .cta-section-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-section-label {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+      font-weight: 600;
+      display: block;
+    }
+
+    .cta-section-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 25px;
+      line-height: 1.2;
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-section-desc {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 700px;
+      margin: 0 auto 45px;
+      line-height: 1.8;
+    }
+
+    .cta-buttons-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .cta-primary-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #ffffff;
+      border: none;
+      border-radius: 50px;
+      padding: 18px 40px;
+      color: #1e3a8a;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-primary-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 255, 255, 0.2);
+    }
+
+    .cta-primary-btn svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-primary-btn:hover svg {
+      transform: translateX(5px);
+    }
+
+    .cta-secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50px;
+      padding: 16px 38px;
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+
+    .cta-secondary-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.8);
+      transform: translateY(-3px);
+    }
+
+    .cta-secondary-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    /* ============================================
+       SECTION 7: ABOUT US
+       ============================================ */
+    .about-us-wrapper {
+      padding: 120px 60px;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-us-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.3), transparent);
+    }
+
+    .about-us-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(30, 58, 138, 0.04), transparent 70%);
+      filter: blur(100px);
+      right: -300px;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: nxFloatSoft 12s ease-in-out infinite;
+    }
+
+    .about-us-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-us-heading {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .about-us-label {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(30, 58, 138, 0.9);
+      margin-bottom: 15px;
+      font-weight: 600;
+      display: block;
+    }
+
+    .about-us-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #0f172a;
+      background: linear-gradient(90deg, #0f172a, #1e3a8a, #0f172a);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .about-us-tagline {
+      font-size: 1.2rem;
+      color: #475569;
+      font-style: italic;
+    }
+
+    .about-us-divider {
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #1e3a8a, transparent);
+      margin: 30px auto 0;
+      border-radius: 3px;
+      box-shadow: 0 0 20px rgba(30, 58, 138, 0.3);
+    }
+
+    .about-us-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .about-us-text-col h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 25px;
+    }
+
+    .about-us-text-col p {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .about-us-image-col {
+      position: relative;
+    }
+
+    .about-us-image-box {
+      background: linear-gradient(145deg, rgba(30, 58, 138, 0.08), rgba(59, 130, 246, 0.04));
+      border: 1px solid rgba(59, 130, 246, 0.15);
+      border-radius: 30px;
+      padding: 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-us-image-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #1e3a8a, #3b82f6, #1e3a8a);
+    }
+
+    .about-us-logo-large {
+      font-family: 'Inter', sans-serif;
+      font-size: 5rem;
+      font-weight: 900;
+      letter-spacing: 12px;
+      background: linear-gradient(90deg, #0f172a, #1e3a8a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .about-us-image-text {
+      font-size: 1rem;
+      color: #64748b;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .about-us-values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .about-us-value-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.98));
+      border: 1px solid rgba(30, 58, 138, 0.12);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .about-us-value-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(30, 58, 138, 0.1);
+      border-color: rgba(30, 58, 138, 0.25);
+    }
+
+    .about-us-value-icon {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto 25px;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.12), rgba(59, 130, 246, 0.06));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+    }
+
+    .about-us-value-card:hover .about-us-value-icon {
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(59, 130, 246, 0.1));
+      transform: scale(1.1);
+    }
+
+    .about-us-value-icon svg {
+      width: 35px;
+      height: 35px;
+      stroke: #1e3a8a;
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .about-us-value-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+
+    .about-us-value-text {
+      font-size: 0.95rem;
+      color: #64748b;
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       SECTION 8: CONTACT US
+       ============================================ */
+    .contact-us-wrapper {
+      padding: 120px 60px;
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-us-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.3), transparent);
+    }
+
+    .contact-us-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(30, 58, 138, 0.05), transparent 70%);
+      filter: blur(100px);
+      left: -200px;
+      bottom: -200px;
+      animation: nxFloatSoft 10s ease-in-out infinite;
+    }
+
+    .contact-us-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-us-heading {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .contact-us-label {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(30, 58, 138, 0.9);
+      margin-bottom: 15px;
+      font-weight: 600;
+      display: block;
+    }
+
+    .contact-us-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #0f172a;
+      background: linear-gradient(90deg, #0f172a, #1e3a8a, #0f172a);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .contact-us-subtitle {
+      font-size: 1.1rem;
+      color: #475569;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .contact-us-divider {
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #1e3a8a, transparent);
+      margin: 30px auto 0;
+      border-radius: 3px;
+      box-shadow: 0 0 20px rgba(30, 58, 138, 0.3);
+    }
+
+    .contact-us-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info-col {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+      border: 1px solid rgba(30, 58, 138, 0.12);
+      border-radius: 24px;
+      padding: 50px 40px;
+    }
+
+    .contact-info-col h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 30px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(30, 58, 138, 0.08);
+    }
+
+    .contact-info-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .contact-info-icon {
+      width: 55px;
+      height: 55px;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.12), rgba(59, 130, 246, 0.06));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-info-icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: #1e3a8a;
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .contact-info-details h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .contact-info-details p {
+      font-size: 0.95rem;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    .contact-info-details a {
+      color: #1e3a8a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info-details a:hover {
+      color: #3b82f6;
+    }
+
+    .contact-form-col {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+      border: 1px solid rgba(30, 58, 138, 0.12);
+      border-radius: 24px;
+      padding: 50px 40px;
+    }
+
+    .contact-form-col h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 30px;
+    }
+
+    .contact-form-group {
+      margin-bottom: 25px;
+    }
+
+    .contact-form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .contact-form-input,
+    .contact-form-textarea {
+      width: 100%;
+      background: rgba(241, 245, 249, 0.6);
+      border: 1px solid rgba(203, 213, 225, 0.6);
+      border-radius: 12px;
+      padding: 15px 20px;
+      font-size: 1rem;
+      color: #0f172a;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form-input:focus,
+    .contact-form-textarea:focus {
+      outline: none;
+      border-color: rgba(30, 58, 138, 0.5);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 20px rgba(30, 58, 138, 0.1);
+    }
+
+    .contact-form-input::placeholder,
+    .contact-form-textarea::placeholder {
+      color: #94a3b8;
+    }
+
+    .contact-form-textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .contact-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .contact-submit-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      border: none;
+      border-radius: 50px;
+      padding: 16px 35px;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      width: 100%;
+      justify-content: center;
+    }
+
+    .contact-submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(30, 58, 138, 0.3);
+    }
+
+    .contact-submit-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-submit-btn:hover svg {
+      transform: translateX(5px);
+    }
+
+    /* ============================================
+       SECTION 9: ENDING SECTION
+       ============================================ */
+    .ending-section-wrapper {
+      padding: 100px 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ending-section-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.4), transparent);
+    }
+
+    .ending-glow-1 {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(30, 58, 138, 0.2), transparent 70%);
+      filter: blur(100px);
+      left: -150px;
+      top: -150px;
+      animation: nxFloatSoft 8s ease-in-out infinite;
+    }
+
+    .ending-glow-2 {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent 70%);
+      filter: blur(80px);
+      right: -100px;
+      bottom: -100px;
+      animation: nxFloatSoft 10s ease-in-out infinite reverse;
+    }
+
+    .ending-section-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .ending-logo-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 4rem;
+      font-weight: 900;
+      letter-spacing: 15px;
+      background: linear-gradient(90deg, #f8fafc, #94a3b8, #f8fafc);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 30px;
+    }
+
+    .ending-tagline {
+      font-size: 1.4rem;
+      color: #94a3b8;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .ending-description {
+      font-size: 1.1rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+
+    .ending-social-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .ending-social-link {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+    }
+
+    .ending-social-link:hover {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: rgba(59, 130, 246, 0.4);
+      transform: translateY(-5px);
+    }
+
+    .ending-social-link svg {
+      width: 22px;
+      height: 22px;
+      fill: #94a3b8;
+      transition: fill 0.3s ease;
+    }
+
+    .ending-social-link:hover svg {
+      fill: #f8fafc;
+    }
+
+    /* ============================================
+       SECTION 10: FOOTER
+       ============================================ */
+    .site-footer-wrapper {
+      padding: 80px 60px 40px;
+      background: #0f172a;
+      position: relative;
+    }
+
+    .site-footer-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+    }
+
+    .site-footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .site-footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand-col {
+      padding-right: 40px;
+    }
+
+    .footer-logo {
+      font-family: 'Inter', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 6px;
+      color: #f8fafc;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .footer-brand-text {
+      font-size: 0.95rem;
+      color: #64748b;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .footer-newsletter-form {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-newsletter-input {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 0.9rem;
+      color: #f8fafc;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .footer-newsletter-input::placeholder {
+      color: #64748b;
+    }
+
+    .footer-newsletter-input:focus {
+      outline: none;
+      border-color: rgba(59, 130, 246, 0.5);
+    }
+
+    .footer-newsletter-btn {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      border: none;
+      border-radius: 10px;
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .footer-newsletter-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    }
+
+    .footer-newsletter-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: #ffffff;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .footer-links-col h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links-list li {
+      margin-bottom: 15px;
+    }
+
+    .footer-links-list a {
+      font-size: 0.9rem;
+      color: #64748b;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .footer-links-list a:hover {
+      color: #f8fafc;
+      transform: translateX(5px);
+    }
+
+    .site-footer-bottom {
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-copyright {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .footer-bottom-links a {
+      font-size: 0.85rem;
+      color: #64748b;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: #f8fafc;
+    }
+
+    .footer-payment-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .footer-payment-icon {
+      width: 45px;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-payment-icon svg {
+      width: 28px;
+      height: 18px;
+      fill: #64748b;
+    }
+
+    /* ============================================
+       RESPONSIVE STYLES FOR ALL NEW SECTIONS
+       ============================================ */
+    @media (max-width: 1200px) {
+      .explore-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .how-works-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+      }
+
+      .how-works-steps::before {
+        display: none;
+      }
+
+      .social-proof-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .social-proof-testimonials {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .site-footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-brand-col {
+        grid-column: span 3;
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .split-content-inner {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      .split-content-visual {
+        order: -1;
+      }
+
+      .split-content-image-box {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .about-us-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .about-us-image-col {
+        order: -1;
+      }
+
+      .about-us-values {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-us-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .explore-categories-wrapper,
+      .why-choose-wrapper,
+      .split-content-wrapper,
+      .how-works-wrapper,
+      .social-proof-wrapper,
+      .cta-section-wrapper,
+      .about-us-wrapper,
+      .contact-us-wrapper,
+      .ending-section-wrapper,
+      .site-footer-wrapper {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      .explore-categories-title,
+      .why-choose-title,
+      .how-works-title,
+      .social-proof-title,
+      .about-us-title,
+      .contact-us-title {
+        font-size: 2.2rem;
+      }
+
+      .cta-section-title {
+        font-size: 2.5rem;
+      }
+
+      .split-content-title {
+        font-size: 2rem;
+      }
+
+      .explore-categories-grid,
+      .why-choose-grid,
+      .how-works-steps,
+      .social-proof-stats,
+      .social-proof-testimonials,
+      .about-us-values {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons-row {
+        flex-direction: column;
+      }
+
+      .cta-primary-btn,
+      .cta-secondary-btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .site-footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand-col {
+        grid-column: span 2;
+      }
+
+      .contact-form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .ending-logo-text {
+        font-size: 2.5rem;
+        letter-spacing: 8px;
+      }
+
+      .ending-tagline {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .explore-categories-wrapper,
+      .why-choose-wrapper,
+      .split-content-wrapper,
+      .how-works-wrapper,
+      .social-proof-wrapper,
+      .cta-section-wrapper,
+      .about-us-wrapper,
+      .contact-us-wrapper,
+      .ending-section-wrapper,
+      .site-footer-wrapper {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .explore-categories-title,
+      .why-choose-title,
+      .how-works-title,
+      .social-proof-title,
+      .about-us-title,
+      .contact-us-title {
+        font-size: 1.8rem;
+      }
+
+      .cta-section-title {
+        font-size: 2rem;
+      }
+
+      .split-content-title {
+        font-size: 1.7rem;
+      }
+
+      .explore-category-card,
+      .why-choose-card,
+      .testimonial-card,
+      .about-us-value-card,
+      .contact-info-col,
+      .contact-form-col {
+        padding: 30px 25px;
+      }
+
+      .how-works-step-number {
+        width: 110px;
+        height: 110px;
+      }
+
+      .how-works-num-text {
+        font-size: 2.2rem;
+      }
+
+      .social-proof-stat-value {
+        font-size: 2.5rem;
+      }
+
+      .site-footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand-col {
+        grid-column: span 1;
+      }
+
+      .site-footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-bottom-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .footer-payment-icons {
+        justify-content: center;
+      }
+
+      .split-content-floating-badge {
+        padding: 14px 18px;
+      }
+
+      .split-content-badge-value {
+        font-size: 1.4rem;
       }
     }
 
     @media (max-width: 500px) {
-      .nexus-headline {
-        font-size: 2.6rem;
+      .explore-categories-title,
+      .why-choose-title,
+      .how-works-title,
+      .social-proof-title,
+      .about-us-title,
+      .contact-us-title {
+        font-size: 1.5rem;
       }
-      .nexus-tagline {
-        font-size: 1rem;
+
+      .cta-section-title {
+        font-size: 1.7rem;
       }
-      .nexus-item-single {
-        width: 280px;
+
+      .ending-logo-text {
+        font-size: 2rem;
+        letter-spacing: 5px;
+      }
+
+      .about-us-logo-large {
+        font-size: 3rem;
+        letter-spacing: 6px;
+      }
+
+      .footer-newsletter-form {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .explore-categories-wrapper,
+      .why-choose-wrapper,
+      .split-content-wrapper,
+      .how-works-wrapper,
+      .social-proof-wrapper,
+      .cta-section-wrapper,
+      .about-us-wrapper,
+      .contact-us-wrapper,
+      .ending-section-wrapper,
+      .site-footer-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .explore-categories-title,
+      .why-choose-title,
+      .how-works-title,
+      .social-proof-title,
+      .about-us-title,
+      .contact-us-title {
+        font-size: 1.3rem;
+      }
+
+      .cta-section-title {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -1147,10 +3806,17 @@
             <circle cx="12" cy="7" r="4"/>
           </svg>
         </button>
+
+        <!-- Added hamburger menu button -->
+        <button class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
 
-    <nav class="nav-bar">
+    <nav class="nav-bar" id="navBar">
       <ul class="nav-links">
         <li class="nav-item">
           <a href="#" class="nav-link active">Home</a>
@@ -1181,7 +3847,7 @@
     <div class="nexus-content">
       <h1 class="nexus-logo">NEXUS</h1>
       <h2 class="nexus-headline">
-        The <span>Future</span><br>of Electronics
+        The <span>Future</span> of Electronics
       </h2>
       <p class="nexus-tagline">
         Premium devices. Gaming power. Smart accessories. Crafted for the next era.
@@ -1545,6 +4211,903 @@
     </div>
   </section>
 
+  <!-- ==================== SECTION 1: EXPLORE BY CATEGORY ==================== -->
+  <section class="explore-categories-wrapper">
+    <div class="explore-categories-inner">
+      <div class="explore-categories-heading">
+        <span class="explore-categories-label">Browse Our Collection</span>
+        <h2 class="explore-categories-title">Explore by Category</h2>
+        <p class="explore-categories-desc">
+          Discover our carefully curated selection of premium electronics organized into intuitive categories. 
+          Whether you're a professional gamer seeking competitive edge, a content creator building your dream setup, 
+          or simply looking to upgrade your everyday tech experience, we have exactly what you need. 
+          Each category features hand-picked products that meet our rigorous quality standards.
+        </p>
+        <div class="explore-categories-divider"></div>
+      </div>
+
+      <div class="explore-categories-grid">
+        <!-- Category 1: New Arrivals -->
+        <div class="explore-category-card">
+          <div class="explore-category-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3 class="explore-category-name">New Arrivals</h3>
+          <p class="explore-category-count">48 Products</p>
+          <p class="explore-category-excerpt">
+            Be the first to experience the latest innovations in technology. Our new arrivals feature cutting-edge products 
+            from the world's leading brands, including next-generation graphics cards, revolutionary processors, 
+            and innovative peripherals that push the boundaries of what's possible.
+          </p>
+        </div>
+
+        <!-- Category 2: Best Sellers -->
+        <div class="explore-category-card">
+          <div class="explore-category-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3 class="explore-category-name">Best Sellers</h3>
+          <p class="explore-category-count">124 Products</p>
+          <p class="explore-category-excerpt">
+            Join thousands of satisfied customers who have chosen these top-rated products. Our best sellers represent 
+            the perfect combination of quality, performance, and value. These products have earned their reputation 
+            through consistent excellence and overwhelmingly positive customer reviews.
+          </p>
+        </div>
+
+        <!-- Category 3: Trending Now -->
+        <div class="explore-category-card">
+          <div class="explore-category-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+              <polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </div>
+          <h3 class="explore-category-name">Trending Now</h3>
+          <p class="explore-category-count">67 Products</p>
+          <p class="explore-category-excerpt">
+            Stay ahead of the curve with products that are making waves in the tech community. From viral gaming gear 
+            to must-have productivity tools, our trending section showcases what's hot right now. These products 
+            are generating buzz for all the right reasons among enthusiasts worldwide.
+          </p>
+        </div>
+
+        <!-- Category 4: Gaming Gear -->
+        <div class="explore-category-card">
+          <div class="explore-category-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="6" width="20" height="12" rx="2"/>
+              <line x1="6" y1="12" x2="6" y2="12"/>
+              <line x1="18" y1="12" x2="18" y2="12"/>
+              <line x1="12" y1="9" x2="12" y2="15"/>
+              <line x1="9" y1="12" x2="15" y2="12"/>
+            </svg>
+          </div>
+          <h3 class="explore-category-name">Gaming Gear</h3>
+          <p class="explore-category-count">186 Products</p>
+          <p class="explore-category-excerpt">
+            Dominate the competition with professional-grade gaming equipment designed for serious players. 
+            From lightning-fast mechanical keyboards with custom switches to precision gaming mice with advanced sensors, 
+            our gaming collection delivers the competitive advantage you need to achieve victory.
+          </p>
+        </div>
+
+        <!-- Category 5: Audio & Sound -->
+        <div class="explore-category-card">
+          <div class="explore-category-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+            </svg>
+          </div>
+          <h3 class="explore-category-name">Audio & Sound</h3>
+          <p class="explore-category-count">93 Products</p>
+          <p class="explore-category-excerpt">
+            Immerse yourself in crystal-clear audio with our premium sound equipment collection. Whether you're 
+            a music producer requiring studio-quality monitoring, a gamer needing precise spatial audio, 
+            or an audiophile seeking the perfect listening experience, we have headphones, speakers, and DACs for you.
+          </p>
+        </div>
+
+        <!-- Category 6: PC Components -->
+        <div class="explore-category-card">
+          <div class="explore-category-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+              <rect x="9" y="9" width="6" height="6"/>
+              <line x1="9" y1="1" x2="9" y2="4"/>
+              <line x1="15" y1="1" x2="15" y2="4"/>
+              <line x1="9" y1="20" x2="9" y2="23"/>
+              <line x1="15" y1="20" x2="15" y2="23"/>
+              <line x1="20" y1="9" x2="23" y2="9"/>
+              <line x1="20" y1="14" x2="23" y2="14"/>
+              <line x1="1" y1="9" x2="4" y2="9"/>
+              <line x1="1" y1="14" x2="4" y2="14"/>
+            </svg>
+          </div>
+          <h3 class="explore-category-name">PC Components</h3>
+          <p class="explore-category-count">215 Products</p>
+          <p class="explore-category-excerpt">
+            Build the ultimate machine with our comprehensive selection of PC components. From high-performance 
+            CPUs and GPUs to lightning-fast NVMe storage and premium motherboards, we stock everything you need 
+            to create a powerhouse system tailored to your exact specifications and performance requirements.
+          </p>
+        </div>
+
+        <!-- Category 7: Monitors & Displays -->
+        <div class="explore-category-card">
+          <div class="explore-category-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3 class="explore-category-name">Monitors & Displays</h3>
+          <p class="explore-category-count">78 Products</p>
+          <p class="explore-category-excerpt">
+            See every detail with stunning clarity on our premium display collection. Featuring 4K and 8K resolution, 
+            high refresh rates up to 360Hz, HDR support, and professional color accuracy, our monitors deliver 
+            breathtaking visuals for gaming, content creation, professional work, and everyday use.
+          </p>
+        </div>
+
+        <!-- Category 8: Accessories -->
+        <div class="explore-category-card">
+          <div class="explore-category-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </div>
+          <h3 class="explore-category-name">Accessories</h3>
+          <p class="explore-category-count">142 Products</p>
+          <p class="explore-category-excerpt">
+            Complete your setup with essential accessories that enhance functionality and style. From RGB lighting strips 
+            and cable management solutions to ergonomic wrist rests and premium desk mats, our accessories collection 
+            helps you create the perfect workspace that's both functional and aesthetically pleasing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2: WHY CHOOSE US ==================== -->
+  <section class="why-choose-wrapper">
+    <div class="why-choose-glow-orb"></div>
+    <div class="why-choose-inner">
+      <div class="why-choose-heading">
+        <span class="why-choose-label">The Nexus Difference</span>
+        <h2 class="why-choose-title">Why Choose Nexus Electronics</h2>
+        <p class="why-choose-subtitle">
+          At Nexus Electronics, we're more than just a retailer - we're your trusted technology partner. 
+          Our commitment to excellence permeates every aspect of our business, from the products we curate 
+          to the support we provide. Here's why thousands of customers trust us with their tech needs.
+        </p>
+        <div class="why-choose-divider"></div>
+      </div>
+
+      <div class="why-choose-grid">
+        <!-- Reason 1: Unbeatable Value -->
+        <div class="why-choose-card">
+          <div class="why-choose-icon-box">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <h3 class="why-choose-card-title">Unbeatable Value</h3>
+          <p class="why-choose-card-text">
+            We believe premium technology should be accessible to everyone. Through strategic partnerships with manufacturers 
+            and efficient operations, we offer competitive pricing without compromising on quality. Our price-match guarantee 
+            ensures you always get the best deal, and our regular sales and exclusive member discounts provide even more savings opportunities.
+          </p>
+        </div>
+
+        <!-- Reason 2: Trusted Reliability -->
+        <div class="why-choose-card">
+          <div class="why-choose-icon-box">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="why-choose-card-title">Trusted Reliability</h3>
+          <p class="why-choose-card-text">
+            With over a decade of industry experience and millions of successful orders, we've built a reputation for 
+            unwavering reliability. Every product undergoes rigorous quality testing before reaching your hands. 
+            Our partnerships with authorized distributors guarantee authentic products, and our comprehensive warranty 
+            programs provide peace of mind for years to come.
+          </p>
+        </div>
+
+        <!-- Reason 3: Ultimate Convenience -->
+        <div class="why-choose-card">
+          <div class="why-choose-icon-box">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="3" width="15" height="13"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <h3 class="why-choose-card-title">Ultimate Convenience</h3>
+          <p class="why-choose-card-text">
+            Shopping with Nexus is designed to be effortless from start to finish. Our intuitive website makes finding 
+            the perfect product simple, while our lightning-fast shipping options include same-day delivery in select areas. 
+            Hassle-free returns, multiple payment methods including installment plans, and 24/7 order tracking make every 
+            purchase a breeze.
+          </p>
+        </div>
+
+        <!-- Reason 4: Premium Quality -->
+        <div class="why-choose-card">
+          <div class="why-choose-icon-box">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="8" r="7"/>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+            </svg>
+          </div>
+          <h3 class="why-choose-card-title">Premium Quality</h3>
+          <p class="why-choose-card-text">
+            We're obsessed with quality and it shows in every product we offer. Our expert buyers personally evaluate 
+            each item in our catalog, selecting only products that meet our exacting standards. We partner exclusively 
+            with reputable brands known for durability and performance, ensuring that every purchase from Nexus 
+            represents a worthwhile investment in quality technology.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3: SPLIT CONTENT ==================== -->
+  <section class="split-content-wrapper">
+    <div class="split-content-glow-left"></div>
+    <div class="split-content-glow-right"></div>
+    <div class="split-content-inner">
+      <div class="split-content-text">
+        <span class="split-content-label">Our Promise to You</span>
+        <h2 class="split-content-title">Experience the Future of Electronics Shopping Today</h2>
+        <p class="split-content-desc">
+          At Nexus Electronics, we've reimagined what buying technology should feel like. Gone are the days of confusing 
+          specifications, unreliable sellers, and disappointing purchases. We've built a platform where cutting-edge 
+          innovation meets exceptional customer care, creating an experience that's as impressive as the products we sell.
+        </p>
+        <p class="split-content-desc">
+          Our team of technology enthusiasts and industry experts works tirelessly to bring you the most exciting products 
+          on the market, backed by knowledge and support you can trust. Whether you're building your first gaming PC or 
+          upgrading your professional workstation, we're here to guide you every step of the way.
+        </p>
+        <ul class="split-content-features">
+          <li class="split-content-feature-item">
+            <span class="split-content-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Expert product curation by technology professionals who test and verify every item in our inventory</span>
+          </li>
+          <li class="split-content-feature-item">
+            <span class="split-content-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Industry-leading customer support available 24/7 via chat, phone, and email with average response times under 2 minutes</span>
+          </li>
+          <li class="split-content-feature-item">
+            <span class="split-content-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Flexible financing options and interest-free installment plans making premium tech accessible to everyone</span>
+          </li>
+          <li class="split-content-feature-item">
+            <span class="split-content-check">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Extended warranty programs and comprehensive protection plans for complete peace of mind</span>
+          </li>
+        </ul>
+        <button class="split-content-cta-btn">
+          <span>Start Shopping Now</span>
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+      <div class="split-content-visual">
+        <div class="split-content-image-box">
+          <img src="/placeholder.svg?height=350&width=350" alt="Premium Gaming Keyboard">
+        </div>
+        <div class="split-content-floating-badge badge-top">
+          <span class="split-content-badge-value">50K+</span>
+          <span class="split-content-badge-label">Happy Customers</span>
+        </div>
+        <div class="split-content-floating-badge badge-bottom">
+          <span class="split-content-badge-value">4.9</span>
+          <span class="split-content-badge-label">Average Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4: HOW IT WORKS ==================== -->
+  <section class="how-works-wrapper">
+    <div class="how-works-inner">
+      <div class="how-works-heading">
+        <span class="how-works-label">Simple & Seamless</span>
+        <h2 class="how-works-title">How Nexus Works</h2>
+        <p class="how-works-subtitle">
+          We've streamlined the entire shopping experience to get your dream tech into your hands as quickly and easily as possible. 
+          From discovery to delivery, every step is designed with your convenience in mind. Here's how simple it is to shop with Nexus.
+        </p>
+        <div class="how-works-divider"></div>
+      </div>
+
+      <div class="how-works-steps">
+        <!-- Step 1 -->
+        <div class="how-works-step">
+          <div class="how-works-step-number">
+            <span class="how-works-num-text">01</span>
+          </div>
+          <h3 class="how-works-step-title">Discover & Explore</h3>
+          <p class="how-works-step-desc">
+            Browse our extensive catalog of premium electronics using our intuitive search and filter tools. 
+            Read detailed specifications, customer reviews, and expert recommendations to find exactly what you need. 
+            Our AI-powered suggestion engine helps you discover products perfectly matched to your requirements.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="how-works-step">
+          <div class="how-works-step-number">
+            <span class="how-works-num-text">02</span>
+          </div>
+          <h3 class="how-works-step-title">Compare & Decide</h3>
+          <p class="how-works-step-desc">
+            Use our powerful comparison tools to evaluate multiple products side by side. View detailed spec sheets, 
+            benchmark results, and real-world performance data. Our expert buying guides and video reviews help you 
+            make informed decisions with confidence, ensuring you choose the perfect product for your needs.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="how-works-step">
+          <div class="how-works-step-number">
+            <span class="how-works-num-text">03</span>
+          </div>
+          <h3 class="how-works-step-title">Checkout & Pay</h3>
+          <p class="how-works-step-desc">
+            Complete your purchase in seconds with our streamlined checkout process. Choose from multiple secure payment 
+            options including credit cards, digital wallets, and interest-free installment plans. Apply discount codes, 
+            loyalty points, or trade-in credits to maximize your savings on every order.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="how-works-step">
+          <div class="how-works-step-number">
+            <span class="how-works-num-text">04</span>
+          </div>
+          <h3 class="how-works-step-title">Receive & Enjoy</h3>
+          <p class="how-works-step-desc">
+            Sit back and relax while we handle the rest. Track your order in real-time from our warehouse to your doorstep. 
+            Our careful packaging ensures products arrive in perfect condition. Enjoy hassle-free setup support and our 
+            30-day satisfaction guarantee for complete peace of mind with every purchase.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5: SOCIAL PROOF / TESTIMONIALS ==================== -->
+  <section class="social-proof-wrapper">
+    <div class="social-proof-glow"></div>
+    <div class="social-proof-inner">
+      <div class="social-proof-heading">
+        <span class="social-proof-label">Trusted by Thousands</span>
+        <h2 class="social-proof-title">What Our Customers Say</h2>
+        <p class="social-proof-subtitle">
+          Don't just take our word for it - hear from the thousands of satisfied customers who have made Nexus their 
+          go-to destination for premium electronics. Our commitment to excellence has earned us a loyal community 
+          of tech enthusiasts who trust us with their most important purchases.
+        </p>
+        <div class="social-proof-divider"></div>
+      </div>
+
+      <!-- Statistics -->
+      <div class="social-proof-stats">
+        <div class="social-proof-stat">
+          <span class="social-proof-stat-value">50K+</span>
+          <span class="social-proof-stat-label">Happy Customers</span>
+        </div>
+        <div class="social-proof-stat">
+          <span class="social-proof-stat-value">98%</span>
+          <span class="social-proof-stat-label">Satisfaction Rate</span>
+        </div>
+        <div class="social-proof-stat">
+          <span class="social-proof-stat-value">100K+</span>
+          <span class="social-proof-stat-label">Products Delivered</span>
+        </div>
+        <div class="social-proof-stat">
+          <span class="social-proof-stat-value">4.9</span>
+          <span class="social-proof-stat-label">Average Rating</span>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="social-proof-testimonials">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">
+            "I've been buying tech products for over 15 years, and Nexus Electronics has completely changed my shopping experience. 
+            The product quality is exceptional, shipping is lightning fast, and their customer service team genuinely cares. 
+            I recently had an issue with a monitor, and they resolved it within 24 hours with no hassle whatsoever. 
+            This is now my only destination for electronics purchases."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MK</div>
+            <div class="testimonial-author-info">
+              <span class="testimonial-author-name">Michael K.</span>
+              <span class="testimonial-author-role">Software Engineer, San Francisco</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">
+            "As a professional content creator, I need reliable equipment that won't let me down during important projects. 
+            Nexus has been my trusted supplier for all my studio gear. Their expert recommendations helped me build the 
+            perfect setup, and the extended warranty gives me peace of mind. The prices are competitive, and the quality 
+            is consistently outstanding. Highly recommended!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SL</div>
+            <div class="testimonial-author-info">
+              <span class="testimonial-author-name">Sarah L.</span>
+              <span class="testimonial-author-role">Content Creator, Los Angeles</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">
+            "I built my entire gaming setup through Nexus and couldn't be happier. From the RTX graphics card to my 
+            240Hz monitor, every component arrived quickly and in perfect condition. What really impressed me was their 
+            compatibility checker tool that ensured all my parts worked together perfectly. Their tech support even 
+            helped me optimize my BIOS settings. Absolutely incredible service!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JT</div>
+            <div class="testimonial-author-info">
+              <span class="testimonial-author-name">James T.</span>
+              <span class="testimonial-author-role">Pro Gamer, Austin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 6: CALL TO ACTION ==================== -->
+  <section class="cta-section-wrapper">
+    <div class="cta-glow-orb-1"></div>
+    <div class="cta-glow-orb-2"></div>
+    <div class="cta-section-inner">
+      <span class="cta-section-label">Limited Time Offer</span>
+      <h2 class="cta-section-title">Ready to Upgrade Your Tech Experience?</h2>
+      <p class="cta-section-desc">
+        Join the Nexus community today and discover why thousands of tech enthusiasts choose us for their premium 
+        electronics needs. Whether you're a gamer seeking competitive advantage, a creator demanding professional tools, 
+        or simply someone who appreciates quality technology, we have exactly what you need at prices you'll love.
+        Sign up now and receive an exclusive 15% discount on your first order, plus free express shipping on orders over $100.
+      </p>
+      <div class="cta-buttons-row">
+        <button class="cta-primary-btn">
+          <span>Shop Now & Save 15%</span>
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+        <button class="cta-secondary-btn">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <span>Watch How It Works</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 7: ABOUT US ==================== -->
+  <section class="about-us-wrapper">
+    <div class="about-us-glow"></div>
+    <div class="about-us-inner">
+      <div class="about-us-heading">
+        <span class="about-us-label">Our Story</span>
+        <h2 class="about-us-title">About Nexus Electronics</h2>
+        <p class="about-us-tagline">"Connecting People with Technology That Inspires"</p>
+        <div class="about-us-divider"></div>
+      </div>
+
+      <div class="about-us-content">
+        <div class="about-us-text-col">
+          <h3>Our Journey & Mission</h3>
+          <p>
+            Founded in 2014 by a group of passionate technology enthusiasts, Nexus Electronics began with a simple 
+            mission: to make premium technology accessible to everyone while providing an exceptional shopping experience. 
+            What started as a small online store operating from a garage has grown into one of the most trusted names 
+            in consumer electronics retail.
+          </p>
+          <p>
+            Our founders, frustrated with the impersonal nature of big-box retailers and the uncertainty of marketplace 
+            sellers, set out to create something different. They envisioned a company that would combine the convenience 
+            of online shopping with the expertise and personal touch of a specialty boutique. Today, that vision has 
+            become reality, and we continue to grow while staying true to our founding principles.
+          </p>
+          <p>
+            At the heart of everything we do is an unwavering commitment to our customers. We believe that buying 
+            technology should be exciting, not stressful. That's why we've built a team of genuine tech enthusiasts 
+            who are as passionate about these products as you are. Every member of our staff, from our warehouse team 
+            to our customer service representatives, shares a love for technology and a dedication to excellence.
+          </p>
+        </div>
+        <div class="about-us-image-col">
+          <div class="about-us-image-box">
+            <span class="about-us-logo-large">NEXUS</span>
+            <p class="about-us-image-text">Electronics Excellence Since 2014</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-us-values">
+        <!-- Value 1 -->
+        <div class="about-us-value-card">
+          <div class="about-us-value-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h4 class="about-us-value-title">Integrity First</h4>
+          <p class="about-us-value-text">
+            We believe in complete transparency in everything we do. From honest product descriptions to clear pricing 
+            with no hidden fees, we've built our reputation on trust. When we make a mistake, we own it and make it right.
+          </p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="about-us-value-card">
+          <div class="about-us-value-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h4 class="about-us-value-title">Customer Obsessed</h4>
+          <p class="about-us-value-text">
+            Your satisfaction isn't just a goal - it's our obsession. We measure our success by the smiles on our customers' 
+            faces. Every policy, every process, and every decision is made with your experience in mind.
+          </p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="about-us-value-card">
+          <div class="about-us-value-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h4 class="about-us-value-title">Innovation Driven</h4>
+          <p class="about-us-value-text">
+            Technology never stands still, and neither do we. We constantly evolve our product selection, improve our 
+            platform, and adopt new technologies to serve you better. Innovation is in our DNA, just like the products we sell.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 8: CONTACT US ==================== -->
+  <section class="contact-us-wrapper">
+    <div class="contact-us-glow"></div>
+    <div class="contact-us-inner">
+      <div class="contact-us-heading">
+        <span class="contact-us-label">Get In Touch</span>
+        <h2 class="contact-us-title">Contact Us</h2>
+        <p class="contact-us-subtitle">
+          Have questions, feedback, or need assistance? Our dedicated support team is here to help. 
+          Reach out through any of the channels below, and we'll get back to you as quickly as possible.
+        </p>
+        <div class="contact-us-divider"></div>
+      </div>
+
+      <div class="contact-us-grid">
+        <!-- Contact Info -->
+        <div class="contact-info-col">
+          <h3>Contact Information</h3>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="contact-info-details">
+              <h4>Visit Our Headquarters</h4>
+              <p>
+                Nexus Electronics Inc.<br>
+                1234 Technology Boulevard, Suite 500<br>
+                San Francisco, CA 94105<br>
+                United States
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="contact-info-details">
+              <h4>Call Us Anytime</h4>
+              <p>
+                Sales: <a href="tel:+18001234567">+1 (800) 123-4567</a><br>
+                Support: <a href="tel:+18007654321">+1 (800) 765-4321</a><br>
+                Available 24/7, 365 days a year
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="contact-info-details">
+              <h4>Email Us</h4>
+              <p>
+                General Inquiries: <a href="mailto:hello@nexus.com">hello@nexus.com</a><br>
+                Customer Support: <a href="mailto:support@nexus.com">support@nexus.com</a><br>
+                Business Partners: <a href="mailto:partners@nexus.com">partners@nexus.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="contact-info-details">
+              <h4>Business Hours</h4>
+              <p>
+                Online Support: 24/7<br>
+                Phone Support: Mon-Sun, 6AM - 10PM PST<br>
+                Headquarters: Mon-Fri, 9AM - 6PM PST
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-col">
+          <h3>Send Us a Message</h3>
+          <form>
+            <div class="contact-form-row">
+              <div class="contact-form-group">
+                <label for="contact-firstname">First Name *</label>
+                <input type="text" id="contact-firstname" class="contact-form-input" placeholder="Enter your first name" required>
+              </div>
+              <div class="contact-form-group">
+                <label for="contact-lastname">Last Name *</label>
+                <input type="text" id="contact-lastname" class="contact-form-input" placeholder="Enter your last name" required>
+              </div>
+            </div>
+            <div class="contact-form-row">
+              <div class="contact-form-group">
+                <label for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" class="contact-form-input" placeholder="your.email@example.com" required>
+              </div>
+              <div class="contact-form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" class="contact-form-input" placeholder="+1 (555) 000-0000">
+              </div>
+            </div>
+            <div class="contact-form-group">
+              <label for="contact-subject">Subject *</label>
+              <input type="text" id="contact-subject" class="contact-form-input" placeholder="How can we help you?" required>
+            </div>
+            <div class="contact-form-group">
+              <label for="contact-message">Your Message *</label>
+              <textarea id="contact-message" class="contact-form-textarea" placeholder="Please describe your inquiry in detail. The more information you provide, the better we can assist you..." required></textarea>
+            </div>
+            <button type="submit" class="contact-submit-btn">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 9: ENDING SECTION ==================== -->
+  <section class="ending-section-wrapper">
+    <div class="ending-glow-1"></div>
+    <div class="ending-glow-2"></div>
+    <div class="ending-section-inner">
+      <span class="ending-logo-text">NEXUS</span>
+      <p class="ending-tagline">Where Technology Meets Excellence</p>
+      <p class="ending-description">
+        Thank you for choosing Nexus Electronics as your trusted technology partner. 
+        We're honored to be part of your journey into the world of premium electronics. 
+        Stay connected with us on social media for the latest product releases, exclusive deals, 
+        tech tips, and community events.
+      </p>
+      <div class="ending-social-links">
+        <a href="#" class="ending-social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="#" class="ending-social-link" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+          </svg>
+        </a>
+        <a href="#" class="ending-social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="#" class="ending-social-link" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+          </svg>
+        </a>
+        <a href="#" class="ending-social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 10: FOOTER ==================== -->
+  <footer class="site-footer-wrapper">
+    <div class="site-footer-inner">
+      <div class="site-footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <span class="footer-logo">NEXUS</span>
+          <p class="footer-brand-text">
+            Your trusted destination for premium electronics since 2014. We're passionate about technology 
+            and committed to providing exceptional products and service to tech enthusiasts worldwide. 
+            Join our community and discover the Nexus difference.
+          </p>
+          <form class="footer-newsletter-form">
+            <input type="email" class="footer-newsletter-input" placeholder="Enter your email for updates">
+            <button type="submit" class="footer-newsletter-btn" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links-col">
+          <h4>Shop</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Gaming Gear</a></li>
+            <li><a href="#">PC Components</a></li>
+            <li><a href="#">Audio & Sound</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+
+        <!-- Support Links -->
+        <div class="footer-links-col">
+          <h4>Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Links -->
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press & Media</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Affiliate Program</a></li>
+            <li><a href="#">Investors</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="footer-links-col">
+          <h4>Legal</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">DMCA Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="site-footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2025 Nexus Electronics Inc. All rights reserved. Made with passion for technology lovers worldwide.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Cookies</a>
+          <a href="#">Accessibility</a>
+        </div>
+        <div class="footer-payment-icons">
+          <div class="footer-payment-icon" aria-label="Visa">
+            <svg viewBox="0 0 48 32"><rect fill="#1A1F71" width="48" height="32" rx="4"/><text x="24" y="20" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">VISA</text></svg>
+          </div>
+          <div class="footer-payment-icon" aria-label="Mastercard">
+            <svg viewBox="0 0 48 32"><rect fill="#000" width="48" height="32" rx="4"/><circle cx="18" cy="16" r="8" fill="#EB001B"/><circle cx="30" cy="16" r="8" fill="#F79E1B"/></svg>
+          </div>
+          <div class="footer-payment-icon" aria-label="American Express">
+            <svg viewBox="0 0 48 32"><rect fill="#006FCF" width="48" height="32" rx="4"/><text x="24" y="18" fill="#fff" font-size="7" text-anchor="middle" font-weight="bold">AMEX</text></svg>
+          </div>
+          <div class="footer-payment-icon" aria-label="PayPal">
+            <svg viewBox="0 0 48 32"><rect fill="#003087" width="48" height="32" rx="4"/><text x="24" y="18" fill="#fff" font-size="7" text-anchor="middle" font-weight="bold">PayPal</text></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script>
     const items = [
       document.getElementById('nexus-item1'),
@@ -1606,10 +5169,33 @@
     });
 
     observer.observe(document.getElementById('most-searched'));
+    
+    const menuToggle = document.getElementById('menuToggle');
+    const navBar = document.getElementById('navBar');
+
+    menuToggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      navBar.classList.toggle('active');
+    });
+
+    // Close menu when clicking a nav link on mobile
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          menuToggle.classList.remove('active');
+          navBar.classList.remove('active');
+        }
+      });
+    });
+
+    // Close menu when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        menuToggle.classList.remove('active');
+        navBar.classList.remove('active');
+      }
+    });
   </script>
-
-
-
-
 </body>
 </html>
