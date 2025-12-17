@@ -1351,6 +1351,26 @@
       .section-title {
         font-size: 1.75rem;
       }
+
+      /* Add responsive min-height for products-container on mobile */
+      .products-container {
+        min-height: auto;
+        padding: 20px 0;
+      }
+      
+      .center-card {
+        display: none;
+      }
+      
+      .products-grid {
+        opacity: 1;
+        transform: scale(1);
+      }
+      
+      .product-card {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Enhanced small mobile breakpoint */
@@ -3177,9 +3197,7 @@
       transform: translateX(5px);
     }
 
-    /* ============================================
-       SECTION 9: ENDING SECTION
-       ============================================ */
+    /* ==================== SECTION 9: ENDING SECTION ==================== */
     .ending-section-wrapper {
       padding: 100px 60px;
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
